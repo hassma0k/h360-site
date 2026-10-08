@@ -76,11 +76,12 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <li>Only <strong>daily totals</strong> needed for challenges and friends are uploaded, and only when you take part in a challenge or have friends.</li>
 <li>Meal photos or text are sent to an AI provider to estimate nutrition and are <strong>not stored</strong>.</li>
 <li><strong>No ads, no tracking, no selling of data.</strong></li>
+<li>Anonymous app-performance diagnostics (no health data, names or email) can be switched off in the app.</li>
 <li>You can delete your account inside the app at any time.</li>
 </ul>
 
 <h2>1. Health data (Apple Health / HealthKit)</h2>
-<p>With your permission, H360 reads the Apple Health types you choose (for example steps, workouts, sleep, heart rate, heart rate variability, weight and nutrition). Each type can be switched on or off in You &rsaquo; Health data, and you can change access at any time in the iPhone Settings app. Entries you add manually in H360 may be written back to Apple Health where Apple allows it.</p>
+<p>With your permission, H360 reads the Apple Health types you choose (for example steps, workouts, sleep, heart rate, heart rate variability, weight and nutrition). Each type can be switched on or off in You &rsaquo; Health data sources, and you can change access at any time in the iPhone Settings app. Entries you add manually in H360 may be written back to Apple Health where Apple allows it.</p>
 <p>This data is processed on your device to calculate your readiness, trends and insights. It is not uploaded. Health data from HealthKit is never used for advertising or marketing, and is never shared with advertisers, data brokers or information resellers.</p>
 
 <h2>2. Daily totals for challenges and friends</h2>
@@ -88,7 +89,8 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <p>Anonymous <strong>benchmark</strong> comparisons ("H360 users") use aggregates only if you explicitly opt in. You can opt out at any time. Group comparisons are only shown when enough members exist.</p>
 
 <h2>3. Account data</h2>
-<p>When you create an account we store your email address (or the private relay address provided by Sign in with Apple), your username, your referral code and the profile settings and sharing choices you set, as well as friend connections, challenges and referral and trial or subscription entitlement dates. Passwords are handled by our authentication provider and are never visible to us. This data is stored with our backend provider, <strong>Supabase</strong>, which processes it on our behalf.</p>
+<p>When you create an account we store your email address (or the private relay address provided by Sign in with Apple), your username, your display name, your referral code, the profile settings and sharing choices you set, the <strong>optional gender and birth year</strong> you enter in your profile (stored with your account to set age- and gender-based targets and to build anonymous benchmark groups; they are never shown to friends), as well as friend connections, challenges and referral and trial or subscription entitlement dates. Passwords are handled by our authentication provider and are never visible to us. This data is stored with our backend provider, <strong>Supabase</strong>, which processes it on our behalf.</p>
+<p><strong>Reports and blocks.</strong> If you report someone, we store the report (who reported, who was reported, where you saw it, the reason and the optional note you wrote) so we can review it, normally within 24 hours. If you block someone, we store that block so the two of you no longer see each other. A block list is visible only to you; the person you block or report is not told who did it. Reports are kept only as long as needed to act on them and to recognise repeated abuse; deleting an account removes its link to the reports.</p>
 <p><strong>No email confirmation is required</strong> to create an account: you can start right away. We send email only for a password-reset code you ask for. Because an email address is not verified, it is not used to decide referral rewards.</p>
 <p><strong>Apple DeviceCheck (one free trial and one referral reward per iPhone).</strong> To stop the free trial and referral rewards from being claimed again and again with new accounts, H360 asks Apple's DeviceCheck service about your iPhone. Apple stores only <strong>two yes/no flags per device</strong> for H360 ("this iPhone already used a free trial", "this iPhone already produced a referral reward"); no personal data, health data or account details are sent to Apple. Our server also keeps a one-way hash of the app's device identifier (it cannot be turned back into the identifier) and the result of the check with your account.</p>
 
@@ -106,22 +108,25 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 </ul>
 
 <h2>7. Deleting your data</h2>
-<p>You can delete your account in the app: You &rsaquo; Profile &rsaquo; Delete account. This removes your account and the server-side data linked to it (profile, friends, challenge data, uploaded daily totals and referral records). Data on your iPhone is removed when you delete the app or your account; signing out keeps your on-device logs for that account on this iPhone, so they come back when you sign in again. Apple Health data stays in Apple Health until you remove it there. To request deletion without the app, email us.</p>
+<p>You can delete your account in the app: open the You tab and tap <strong>Delete account</strong> (the last row; it is also in You &rsaquo; Profile &amp; body &rsaquo; Delete account). This removes your account and the server-side data linked to it (profile, friends, challenge data, uploaded daily totals and referral records). Data on your iPhone is removed when you delete the app or your account; signing out keeps your on-device logs for that account on this iPhone, so they come back when you sign in again. Apple Health data stays in Apple Health until you remove it there. To request deletion without the app, email us.</p>
 <p>To prevent misuse of the free trial and referral rewards, we keep only a one-way cryptographic hash (SHA-256) of the email address of a deleted account. It cannot be turned back into your email and is used only to stop the same email from receiving a new free trial or earning referral rewards again.</p>
 
-<h2>8. Security and retention</h2>
-<p>Data in transit is encrypted, and access to server-side data is restricted by per-user access rules. We keep server-side data only while your account exists.</p>
+<h2>8. Anonymous diagnostics</h2>
+<p>To find and fix slowness and crashes, H360 sends <strong>anonymous diagnostics</strong>: timings of app operations, error types, <strong>app launches</strong>, reports of the app freezing (including <strong>the name of the screen that was open when it froze</strong>), and crash, hang and launch-time reports provided by Apple's MetricKit. Each report includes your device model, the app and iOS version, the app language and a <strong>random install identifier</strong> that is not linked to your account. It does <strong>not</strong> include health data, meal or workout content, names, your email address, your username or any account identifier, and it works the same whether or not you are signed in. Diagnostics are kept for <strong>30 days</strong> and are used only to improve the app. You can turn them off at any time in You &rsaquo; Sharing &amp; privacy &rsaquo; Diagnostics.</p>
 
-<h2>9. Children</h2>
+<h2>9. Security and retention</h2>
+<p>Data in transit is encrypted, and access to server-side data is restricted by per-user access rules. We keep account data only while your account exists. Anonymous diagnostics are deleted automatically after 30 days.</p>
+
+<h2>10. Children</h2>
 <p>H360 is not directed to children under 13 and we do not knowingly collect their data. Fasting features are switched off for users who tell us they are under 18.</p>
 
-<h2>10. Your rights</h2>
+<h2>11. Your rights</h2>
 <p>You can access, correct or delete your data, withdraw permissions and opt out of optional sharing, either in the app or by contacting us. Depending on where you live, you may have additional rights under local law.</p>
 
-<h2>11. Not medical advice</h2>
+<h2>12. Not medical advice</h2>
 <p>H360 is not a medical device and does not diagnose, treat or prevent any condition. Talk to a qualified professional before changing your diet, exercise or fasting routine.</p>
 
-<h2>12. Changes and contact</h2>
+<h2>13. Changes and contact</h2>
 <p>If we change this policy we will update the date above and, for material changes, tell you in the app. Questions: <a href="mailto:alhassan.mu@gmail.com">alhassan.mu@gmail.com</a>.</p>
 
 </section>
@@ -137,11 +142,12 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <li>لا تُرفع سوى <strong>الإجماليات اليومية</strong> اللازمة للتحديات والأصدقاء، وفقط عند مشاركتك في تحدٍّ أو وجود أصدقاء لديك.</li>
 <li>تُرسل صور الوجبات أو نصوصها إلى مزوّد ذكاء اصطناعي لتقدير القيم الغذائية و<strong>لا يتم تخزينها</strong>.</li>
 <li><strong>لا إعلانات ولا تتبّع ولا بيع للبيانات.</strong></li>
+<li>يمكن إيقاف بيانات تشخيص أداء التطبيق المجهولة (دون بيانات صحية أو أسماء أو بريد إلكتروني) من داخل التطبيق.</li>
 <li>يمكنك حذف حسابك من داخل التطبيق في أي وقت.</li>
 </ul>
 
 <h2>1 — البيانات الصحية (تطبيق «الصحة» / HealthKit)</h2>
-<p>بإذنك، يقرأ H360 أنواع البيانات التي تختارها من تطبيق «الصحة» (مثل الخطوات والتمارين والنوم ومعدل ضربات القلب وتغيّر معدل ضربات القلب والوزن والتغذية). يمكن تشغيل أو إيقاف كل نوع من حسابي &rsaquo; البيانات الصحية، كما يمكنك تغيير الأذونات في أي وقت من تطبيق «الإعدادات». وقد تُكتب الإدخالات اليدوية في H360 إلى تطبيق «الصحة» حيث تسمح Apple بذلك.</p>
+<p>بإذنك، يقرأ H360 أنواع البيانات التي تختارها من تطبيق «الصحة» (مثل الخطوات والتمارين والنوم ومعدل ضربات القلب وتغيّر معدل ضربات القلب والوزن والتغذية). يمكن تشغيل أو إيقاف كل نوع من حسابي &rsaquo; مصادر بيانات الصحة، كما يمكنك تغيير الأذونات في أي وقت من تطبيق «الإعدادات». وقد تُكتب الإدخالات اليدوية في H360 إلى تطبيق «الصحة» حيث تسمح Apple بذلك.</p>
 <p>تُعالَج هذه البيانات على جهازك لحساب الجاهزية والاتجاهات والرؤى، ولا يتم رفعها. ولا تُستخدم بيانات HealthKit للإعلان أو التسويق، ولا تُشارَك مع المعلنين أو وسطاء البيانات أو معيدي بيع المعلومات.</p>
 
 <h2>2 — الإجماليات اليومية للتحديات والأصدقاء</h2>
@@ -149,7 +155,8 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <p>تعتمد مقارنات <strong>المعايير</strong> المجهولة («مستخدمو H360») على إجماليات فقط إذا وافقت صراحةً، ويمكنك إلغاء الموافقة في أي وقت. ولا تظهر المقارنات الجماعية إلا عند توفر عدد كافٍ من الأعضاء.</p>
 
 <h2>3 — بيانات الحساب</h2>
-<p>عند إنشاء حساب نخزّن بريدك الإلكتروني (أو عنوان الإخفاء الذي يوفّره «تسجيل الدخول باستخدام Apple»)، واسم المستخدم، ورمز الإحالة، وإعدادات ملفك الشخصي وخيارات المشاركة، إضافةً إلى علاقات الصداقة والتحديات وتواريخ الإحالة والتجربة والاشتراك. تتولى جهة المصادقة معالجة كلمات المرور ولا نراها نحن. تُخزَّن هذه البيانات لدى مزوّد الخدمة الخلفية <strong>Supabase</strong> الذي يعالجها نيابةً عنا.</p>
+<p>عند إنشاء حساب نخزّن بريدك الإلكتروني (أو عنوان الإخفاء الذي يوفّره «تسجيل الدخول باستخدام Apple»)، واسم المستخدم، والاسم المعروض، ورمز الإحالة، وإعدادات ملفك الشخصي وخيارات المشاركة، و<strong>الجنس وسنة الميلاد الاختياريين</strong> اللذين تدخلهما في ملفك الشخصي (يُخزَّنان مع حسابك لتحديد الأهداف حسب العمر والجنس وبناء مجموعات المقارنة المجهولة، ولا يظهران لأصدقائك أبدًا)، إضافةً إلى علاقات الصداقة والتحديات وتواريخ الإحالة والتجربة والاشتراك. تتولى جهة المصادقة معالجة كلمات المرور ولا نراها نحن. تُخزَّن هذه البيانات لدى مزوّد الخدمة الخلفية <strong>Supabase</strong> الذي يعالجها نيابةً عنا.</p>
+<p><strong>البلاغات والحظر.</strong> إذا أبلغت عن شخص، نخزّن البلاغ (من أبلغ، وعن من، وأين شاهدته، والسبب، والملاحظة الاختيارية التي كتبتها) لنراجعه، وعادةً خلال 24 ساعة. وإذا حظرت شخصًا، نخزّن الحظر حتى لا يرى أحدكما الآخر. قائمة الحظر ظاهرة لك وحدك، ولا يُخبَر الشخص الذي حظرته أو أبلغت عنه بمن فعل ذلك. تُحفظ البلاغات فقط ما دام ذلك لازمًا للتصرف بشأنها ولرصد الإساءة المتكررة، ويؤدي حذف الحساب إلى فصل صلته بالبلاغات.</p>
 <p><strong>لا يلزم تأكيد البريد الإلكتروني</strong> لإنشاء حساب، إذ يمكن البدء فورًا. لا نرسل بريدًا إلا لرمز إعادة تعيين كلمة المرور عند طلبه. ولأن البريد الإلكتروني لا يُتحقق منه، فلا يُستخدم لتقرير مكافآت الإحالة.</p>
 <p><strong>خدمة DeviceCheck من Apple (تجربة مجانية واحدة ومكافأة إحالة واحدة لكل آيفون).</strong> لمنع تكرار الحصول على التجربة المجانية ومكافآت الإحالة بحسابات جديدة، يستعلم H360 من خدمة DeviceCheck من Apple عن الآيفون. تحفظ Apple لـ H360 <strong>علامتين فقط (نعم/لا) لكل جهاز</strong> («استُخدمت تجربة مجانية على هذا الآيفون»، «منح هذا الآيفون مكافأة إحالة»)، ولا تُرسل إلى Apple أي بيانات شخصية أو صحية أو بيانات حساب. ويحتفظ خادمنا أيضًا ببصمة أحادية الاتجاه لمعرّف الجهاز الخاص بالتطبيق (لا يمكن استرجاع المعرّف منها) وبنتيجة التحقق مع حسابك.</p>
 
@@ -167,22 +174,25 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 </ul>
 
 <h2>7 — حذف بياناتك</h2>
-<p>يمكنك حذف حسابك من التطبيق: حسابي &rsaquo; الملف الشخصي &rsaquo; حذف الحساب. يؤدي ذلك إلى إزالة حسابك والبيانات المرتبطة به على الخادم (الملف الشخصي والأصدقاء وبيانات التحديات والإجماليات اليومية المرفوعة وسجلات الإحالة). تُزال البيانات الموجودة على جهازك عند حذف التطبيق أو الحساب، أما تسجيل الخروج فيُبقي سجلاتك لذلك الحساب على هذا الآيفون لتعود عند تسجيل الدخول مجددًا. وتبقى بيانات تطبيق «الصحة» فيه حتى تُحذف منه. ولطلب الحذف دون استخدام التطبيق راسلنا عبر البريد.</p>
+<p>يمكنك حذف حسابك من التطبيق: افتح علامة التبويب «حسابي» واضغط <strong>حذف الحساب</strong> (الصف الأخير؛ وهو موجود أيضًا في حسابي &rsaquo; الملف الشخصي والجسم &rsaquo; حذف الحساب). يؤدي ذلك إلى إزالة حسابك والبيانات المرتبطة به على الخادم (الملف الشخصي والأصدقاء وبيانات التحديات والإجماليات اليومية المرفوعة وسجلات الإحالة). تُزال البيانات الموجودة على جهازك عند حذف التطبيق أو الحساب، أما تسجيل الخروج فيُبقي سجلاتك لذلك الحساب على هذا الآيفون لتعود عند تسجيل الدخول مجددًا. وتبقى بيانات تطبيق «الصحة» فيه حتى تُحذف منه. ولطلب الحذف دون استخدام التطبيق راسلنا عبر البريد.</p>
 <p>لمنع إساءة استخدام التجربة المجانية ومكافآت الإحالة، نحتفظ فقط ببصمة مشفّرة أحادية الاتجاه (SHA-256) لعنوان البريد الإلكتروني للحساب المحذوف. لا يمكن استرجاع بريدك منها، وتُستخدم فقط لمنع البريد نفسه من الحصول على تجربة مجانية جديدة أو مكافآت إحالة مرة أخرى.</p>
 
-<h2>8 — الأمان والاحتفاظ بالبيانات</h2>
-<p>تُشفَّر البيانات أثناء النقل، ويقتصر الوصول إلى البيانات على الخادم بقواعد وصول خاصة بكل مستخدم. ونحتفظ بالبيانات على الخادم ما دام حسابك قائمًا فقط.</p>
+<h2>8 — بيانات التشخيص المجهولة</h2>
+<p>لاكتشاف البطء والأعطال وإصلاحها، يرسل H360 <strong>بيانات تشخيص مجهولة</strong>: أزمنة تنفيذ عمليات التطبيق، وأنواع الأخطاء، و<strong>مرات فتح التطبيق</strong>، وتقارير تجمّد التطبيق (بما فيها <strong>اسم الشاشة المفتوحة وقت التجمّد</strong>)، وتقارير الأعطال والتجمّد وزمن الإقلاع التي توفرها خدمة MetricKit من Apple. يتضمن كل تقرير طراز الجهاز ونسخة التطبيق ونسخة iOS ولغة التطبيق و<strong>معرّفًا عشوائيًا للتثبيت</strong> غير مرتبط بحسابك. ولا يتضمن <strong>أي</strong> بيانات صحية ولا محتوى الوجبات أو التمارين ولا الأسماء ولا بريدك الإلكتروني ولا اسم المستخدم ولا أي معرّف للحساب، ويعمل بالطريقة نفسها سواء سجّلت الدخول أم لا. تُحفظ بيانات التشخيص <strong>30 يومًا</strong> وتُستخدم فقط لتحسين التطبيق. يمكن إيقافها في أي وقت من حسابي &rsaquo; المشاركة والخصوصية &rsaquo; التشخيص.</p>
 
-<h2>9 — الأطفال</h2>
+<h2>9 — الأمان والاحتفاظ بالبيانات</h2>
+<p>تُشفَّر البيانات أثناء النقل، ويقتصر الوصول إلى البيانات على الخادم بقواعد وصول خاصة بكل مستخدم. ونحتفظ ببيانات الحساب ما دام حسابك قائمًا فقط، وتُحذف بيانات التشخيص المجهولة تلقائيًا بعد 30 يومًا.</p>
+
+<h2>10 — الأطفال</h2>
 <p>H360 غير موجّه للأطفال دون 13 عامًا ولا نجمع بياناتهم عن علم. وتُوقَف ميزات الصيام للمستخدمين الذين يخبروننا بأن أعمارهم دون 18 عامًا.</p>
 
-<h2>10 — حقوقك</h2>
+<h2>11 — حقوقك</h2>
 <p>يمكنك الاطلاع على بياناتك أو تصحيحها أو حذفها، وسحب الأذونات، وإيقاف المشاركة الاختيارية، من داخل التطبيق أو بالتواصل معنا. وقد تتوفر لك حقوق إضافية بموجب القوانين المحلية في بلدك.</p>
 
-<h2>11 — ليس نصيحة طبية</h2>
+<h2>12 — ليس نصيحة طبية</h2>
 <p>H360 ليس جهازًا طبيًا ولا يشخّص أو يعالج أو يمنع أي حالة. استشر مختصًا مؤهلًا قبل تغيير نظامك الغذائي أو الرياضي أو نظام الصيام.</p>
 
-<h2>12 — التغييرات والتواصل</h2>
+<h2>13 — التغييرات والتواصل</h2>
 <p>إذا عدّلنا هذه السياسة فسنحدّث التاريخ أعلاه، وسنُعلمك داخل التطبيق عند إجراء تغييرات جوهرية. للاستفسار: <a href="mailto:alhassan.mu@gmail.com" dir="ltr">alhassan.mu@gmail.com</a>.</p>
 
 </section>
