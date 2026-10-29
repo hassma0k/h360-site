@@ -7,8 +7,19 @@
 <meta name="theme-color" content="#0F1216">
 <meta name="description" content="Help and contact for H360.">
 <title>Support · H360</title>
-<link rel="icon" href="icon.png" type="image/png">
-<link rel="apple-touch-icon" href="icon.png">
+<link rel="canonical" href="https://hassma0k.github.io/h360-site/support.html">
+<meta name="apple-itunes-app" content="app-id=6820465673">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="H360">
+<meta property="og:url" content="https://hassma0k.github.io/h360-site/support.html">
+<meta property="og:title" content="Support · H360">
+<meta property="og:description" content="Help and contact for H360.">
+<meta property="og:image" content="https://hassma0k.github.io/h360-site/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
 :root{--bg:#0F1216;--surface:#181C21;--raised:#1F2329;--line:#262A31;--text:#F2F3F5;--text2:#B3B8C0;--text3:#9AA0A9;
 --fuel:#E57A5C;--move:#7BC67A;--rest:#8C8FEF;--fast:#5CC8D5}
@@ -61,7 +72,7 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <body>
 <div class="wrap">
 <header class="top">
-<a class="brand" href="index.html"><img src="icon.png" alt="" width="36" height="36">H360</a>
+<a class="brand" href="index.html"><img src="apple-touch-icon.png" alt="" width="36" height="36">H360</a>
 <div class="lang" role="group" aria-label="Language"><button type="button" data-set="en" aria-pressed="true">English</button><button type="button" data-set="ar" aria-pressed="false" lang="ar">العربية</button></div>
 </header>
 <section data-l="en" lang="en" dir="ltr">
@@ -122,7 +133,7 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
   var saved=null;try{saved=localStorage.getItem('h360lang')}catch(e){}
   var lang=saved||((navigator.language||'en').toLowerCase().indexOf('ar')===0?'ar':'en');
   function set(l){
-    lang=l;d.setAttribute('data-lang',l);d.lang=l;
+    lang=l;d.setAttribute('data-lang',l);d.lang=l;d.dir=(l==='ar'?'rtl':'ltr');
     var bs=document.querySelectorAll('.lang button');
     for(var i=0;i<bs.length;i++)bs[i].setAttribute('aria-pressed',bs[i].getAttribute('data-set')===l?'true':'false');
     try{localStorage.setItem('h360lang',l)}catch(e){}

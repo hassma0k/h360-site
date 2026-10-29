@@ -5,10 +5,31 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0F1216">
-<meta name="description" content="H360 is your whole day — Fuel, Move, Rest, Fast — in one calm Arabic-and-English iPhone app that judges you by the week, not the day.">
-<title>Health, 360° covered · H360</title>
-<link rel="icon" href="icon.png" type="image/png">
-<link rel="apple-touch-icon" href="icon.png">
+<meta name="description" content="Photograph a meal (even kabsa) and get the calories, plus fasting, sleep, cycle and a daily Readiness score. Arabic and English iPhone app. 7 days free, no card.">
+<title>H360: Calories &amp; Fasting app in Arabic and English</title>
+<link rel="canonical" href="https://hassma0k.github.io/h360-site/">
+<meta name="apple-itunes-app" content="app-id=6820465673">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="H360">
+<meta property="og:url" content="https://hassma0k.github.io/h360-site/">
+<meta property="og:title" content="H360: Calories &amp; Fasting · حساب السعرات والصيام">
+<meta property="og:description" content="Scan Saudi food, know the calories. Fasting, sleep and cycle too. 7 days free, no card. صوّر أكلك السعودي واعرف سعراته. 7 أيام مجانًا دون بطاقة.">
+<meta property="og:image" content="https://hassma0k.github.io/h360-site/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="H360 app icon with the line: Scan Saudi food, know the calories">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="H360: Calories &amp; Fasting · حساب السعرات والصيام">
+<meta name="twitter:description" content="Scan Saudi food, know the calories. Fasting, sleep and cycle too. 7 days free, no card.">
+<meta name="twitter:image" content="https://hassma0k.github.io/h360-site/og-image.jpg">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MobileApplication","name":"H360","alternateName":"H360: Calories & Fasting","applicationCategory":"HealthApplication","operatingSystem":"iOS 17.0 or later","inLanguage":["en","ar"],"description":"Photo, voice and text meal logging with Gulf dishes, fasting counted from your meals, sleep, cycle tracking and a daily Readiness score, in Arabic and English. A wellness app, not a medical device.","url":"https://hassma0k.github.io/h360-site/","downloadUrl":"https://apps.apple.com/app/id6820465673","installUrl":"https://apps.apple.com/app/id6820465673","image":"https://hassma0k.github.io/h360-site/icon.png","screenshot":"https://hassma0k.github.io/h360-site/og-image.jpg","author":{"@type":"Person","name":"Mustafa AlHassan"},"offers":{"@type":"Offer","price":"0","priceCurrency":"SAR","description":"Free download with a 7-day free trial (no card). H360 Plus is an optional in-app subscription; the price is shown in the App Store."}}
+</script>
 <style>
 :root{--bg:#0F1216;--surface:#181C21;--raised:#1F2329;--line:#262A31;--text:#F2F3F5;--text2:#B3B8C0;--text3:#9AA0A9;
 --fuel:#E57A5C;--move:#7BC67A;--rest:#8C8FEF;--fast:#5CC8D5}
@@ -35,10 +56,21 @@ strong{color:var(--text)}
 .pillars{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
 .pill{padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px;color:#0F1216}
 .fuel{background:var(--fuel)}.move{background:var(--move)}.rest{background:var(--rest)}.fast{background:var(--fast)}
-.hero{text-align:center;padding:28px 0 8px}
-.hero img{width:132px;height:132px;border-radius:30px;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 16px 40px rgba(0,0,0,.55)}
-.hero h1{font-size:40px;font-weight:800;margin-top:20px}
-.hero .tag{font-size:19px;color:var(--text2);margin:0}
+.hero{text-align:center;padding:12px 0 8px}
+.hero img{width:96px;height:96px;border-radius:22px;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 16px 40px rgba(0,0,0,.55)}
+.hero .eyebrow{font-weight:800;font-size:15px;color:var(--text2);margin:16px 0 0;letter-spacing:.2px}
+.hero h1{font-size:34px;font-weight:800;margin:6px 0 10px}
+.hero .tag{font-size:18px;color:var(--text2);margin:0 auto;max-width:560px}
+@media (min-width:600px){.hero{padding-top:24px}.hero img{width:132px;height:132px;border-radius:30px}.hero h1{font-size:42px}}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;margin:20px 0 10px;border-radius:14px;background:var(--fast);color:#0F1216;font-weight:800;font-size:17px;line-height:1.2;box-shadow:0 10px 28px rgba(92,200,213,.22)}
+.cta:hover{text-decoration:none;filter:brightness(1.07)}
+.cta:focus-visible{outline:3px solid var(--text);outline-offset:3px}
+.cta svg{width:22px;height:22px;flex:none}
+.trust{font-size:14px;color:var(--text2);margin:0;text-wrap:balance}
+.hero h1,.hero .tag{text-wrap:balance}
+[dir=rtl] .trust{font-size:16px}
+.final{text-align:center}
+.final h2{margin-top:0}
 .hero .pillars{justify-content:center}
 .links{display:grid;gap:10px;margin:22px 0}
 .links a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 18px;color:var(--text);font-weight:600}
@@ -69,18 +101,20 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <body>
 <div class="wrap">
 <header class="top">
-<a class="brand" href="index.html"><img src="icon.png" alt="" width="36" height="36">H360</a>
+<a class="brand" href="index.html"><img src="apple-touch-icon.png" alt="" width="36" height="36">H360</a>
 <div class="lang" role="group" aria-label="Language"><button type="button" data-set="en" aria-pressed="true">English</button><button type="button" data-set="ar" aria-pressed="false" lang="ar">العربية</button></div>
 </header>
 <section data-l="en" lang="en" dir="ltr">
 
 <div class="hero">
-<img src="icon.png" alt="H360 app icon" width="132" height="132">
-<h1>H360</h1>
-<p class="tag">Health, 360° covered.</p>
+<img src="icon-264.png" alt="H360 app icon" width="132" height="132">
+<p class="eyebrow">H360 · Health, 360° covered.</p>
+<h1>Scan Saudi food, know the calories</h1>
+<p class="tag">Food, movement, sleep and fasting in one Arabic-and-English iPhone app that judges you by the week, not the day.</p>
+<a class="cta js-store" data-pos="hero" href="https://apps.apple.com/app/id6820465673"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Download on the App Store</a>
+<p class="trust">7 days free · no card · nothing charged until you choose a plan</p>
 <div class="pillars"><span class="pill fuel">Fuel</span><span class="pill move">Move</span><span class="pill rest">Rest</span><span class="pill fast">Fast</span></div>
 </div>
-<p class="lead">Your whole day — Fuel, Move, Rest, Fast — in one calm Arabic-and-English app that judges you by the week, not the day.</p>
 <div class="card">
 <ul class="msgs">
 <li><strong>Daily targets, weekly judgement.</strong>A missed day is never a failure: H360 shows a calm catch-up for the rest of the week.</li>
@@ -96,6 +130,11 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <p>Invite friends: they get 7 days free, you get a free month — up to 12 months.</p>
 <p class="fine">Your friend gets H360’s 7-day free trial. You get a free month of H360 Plus when their trial ends, if they used H360 on at least 3 days. One reward per iPhone, up to 12 months. If you’re subscribed, free months start after your paid plan. Saudi App Store prices; cancel any time in iPhone Settings.</p>
 </div>
+<div class="card final">
+<h2>Start your 7 free days</h2>
+<a class="cta js-store" data-pos="bottom" href="https://apps.apple.com/app/id6820465673"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Download on the App Store</a>
+<p class="trust">No card · nothing charged until you choose a plan · cancel any time in iPhone Settings</p>
+</div>
 <p class="meta">English and Arabic (full right-to-left). iPhone, iOS 17 or later.</p>
 <div class="links">
 <a href="support.html">Support<span>Help, FAQs and how to contact us</span></a>
@@ -109,17 +148,19 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <section data-l="ar" lang="ar" dir="rtl">
 
 <div class="hero">
-<img src="icon.png" alt="أيقونة تطبيق H360" width="132" height="132">
-<h1>H360</h1>
-<p class="tag">صحتك، من كل الجوانب.</p>
+<img src="icon-264.png" alt="أيقونة تطبيق H360" width="132" height="132">
+<p class="eyebrow">H360 · صحتك، من كل الجوانب.</p>
+<h1>صوّر أكلك السعودي واعرف سعراته</h1>
+<p class="tag">الأكل والحركة والنوم والصيام في تطبيق واحد بالعربية والإنجليزية، يقيّمك على أسبوعك لا على يومك.</p>
+<a class="cta js-store" data-pos="hero" href="https://apps.apple.com/app/id6820465673"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>حمّل التطبيق من App Store</a>
+<p class="trust">7 أيام مجانًا · دون بطاقة · لا يُخصم شيء قبل اختيار خطة</p>
 <div class="pillars"><span class="pill fuel">وقود</span><span class="pill move">حركة</span><span class="pill rest">راحة</span><span class="pill fast">صيام</span></div>
 </div>
-<p class="lead">يومك كله — الغذاء والحركة والراحة والصيام — في تطبيق واحد هادئ بالعربية والإنجليزية، يقيّمك على أسبوعك لا على يومك.</p>
 <div class="card">
 <ul class="msgs">
-<li><strong>أهداف يومية وتقييم أسبوعي.</strong>اليوم الفائت ليس فشلًا أبدًا: يعرض لك H360 خطة هادئة لتعويضه في بقية الأسبوع.</li>
+<li><strong>أهداف يومية وتقييم أسبوعي.</strong>اليوم الفائت ليس فشلًا أبدًا: يعرض لك H360 خطة بسيطة لتعويضه في بقية الأسبوع.</li>
 <li><strong>صوّرها أو قُلها.</strong>سجّل وجبتك بصورة أو بملاحظة صوتية بالعربية أو الإنجليزية أو بسطر نصي. تقديرات سريعة يمكنك تعديلها — حتى الكبسة.</li>
-<li><strong>درجة واحدة هادئة كل صباح.</strong>جاهزية من 0 إلى 100 مقارنةً بمعدّلك أنت، مع Apple Watch (أو جهاز آخر) يسجّل النوم ونبض القلب الليلي في تطبيق «الصحة».</li>
+<li><strong>درجة واحدة كل صباح.</strong>جاهزية من 0 إلى 100 مقارنةً بمعدّلك أنت، مع Apple Watch (أو جهاز آخر) يسجّل النوم ونبض القلب الليلي في تطبيق «الصحة».</li>
 <li><strong>صيامك يُحسب تلقائيًا.</strong>تُحتسب ساعات الصيام من الفترات بين وجباتك.</li>
 <li><strong>كل تمرين يُحلَّل تلقائيًا.</strong>من ساعتك أو Garmin أو أي تطبيق يكتب التمارين في «الصحة»: دقائق المناطق والاستشفاء وتقدّم أسبوعك.</li>
 <li><strong>أفضل مع الأصدقاء. وخصوصيتك محفوظة.</strong>بياناتك الصحية الخام تبقى على جهاز iPhone. لا تُشارَك إلا أربعة إجماليات يومية، وفقط عند انضمامك إلى تحدٍّ أو إضافة أصدقاء.</li>
@@ -129,6 +170,11 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 <p class="price"><strong>7 أيام مجانًا دون بطاقة. لا يُخصم شيء قبل اختيار خطة.</strong> ثم H360 Plus شهريًا أو سنويًا؛ والسعر معروض في التطبيق وفي App Store.</p>
 <p>ادعُ أصدقاءك: يحصلون على 7 أيام مجانًا، وتحصل على شهر مجاني — حتى 12 شهرًا.</p>
 <p class="fine">يحصل صديقك على تجربة H360 المجانية لمدة 7 أيام. وتحصل أنت على شهر مجاني من H360 Plus بعد انتهاء تجربته إذا استخدم H360 في 3 أيام على الأقل. مكافأة واحدة لكل جهاز iPhone، وحتى 12 شهرًا. إذا كنت مشتركًا، تبدأ الأشهر المجانية بعد انتهاء خطتك المدفوعة. الأسعار في متجر App Store السعودي؛ ويمكنك الإلغاء في أي وقت من إعدادات iPhone.</p>
+</div>
+<div class="card final">
+<h2>ابدأ أيامك السبعة المجانية</h2>
+<a class="cta js-store" data-pos="bottom" href="https://apps.apple.com/app/id6820465673"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>حمّل التطبيق من App Store</a>
+<p class="trust">دون بطاقة · لا يُخصم شيء قبل اختيار خطة · الإلغاء في أي وقت من إعدادات iPhone</p>
 </div>
 <p class="meta">بالإنجليزية والعربية (مع دعم كامل للكتابة من اليمين إلى اليسار). لجهاز iPhone بنظام iOS 17 أو أحدث.</p>
 <div class="links">
@@ -147,10 +193,21 @@ section[data-l=ar]{border-top:1px solid var(--line);margin-top:36px;padding-top:
 (function(){
   var d=document.documentElement,b=document.body;
   d.classList.add('js');
+  function param(k){var m=new RegExp('[?&]'+k+'=([^&#]*)').exec(location.search);try{return m?decodeURIComponent(m[1].replace(/\+/g,' ')):''}catch(e){return ''}}
+  var forced=param('lang');forced=(forced==='ar'||forced==='en')?forced:null;
   var saved=null;try{saved=localStorage.getItem('h360lang')}catch(e){}
-  var lang=saved||((navigator.language||'en').toLowerCase().indexOf('ar')===0?'ar':'en');
+  var lang=forced||saved||((navigator.language||'en').toLowerCase().indexOf('ar')===0?'ar':'en');
+  // App Store campaign links (no cookies, no trackers). Paste the provider token from App Store Connect >
+  // Analytics > Acquisition > Campaigns > "Generate a campaign link" (the pt=... value) into PT. While PT is empty
+  // the buttons use the plain App Store link. A page URL like ?ct=creator-noura passes its campaign through.
+  var APP='6820465673',PT='';
+  var ls=document.querySelectorAll('a.js-store');
+  for(var j=0;PT&&j<ls.length;j++){
+    var ct=(param('ct')||param('utm_campaign')||('site-'+(ls[j].getAttribute('data-pos')||'link'))).toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,40)||'site';
+    ls[j].href='https://apps.apple.com/app/apple-store/id'+APP+'?pt='+encodeURIComponent(PT)+'&ct='+encodeURIComponent(ct)+'&mt=8';
+  }
   function set(l){
-    lang=l;d.setAttribute('data-lang',l);d.lang=l;
+    lang=l;d.setAttribute('data-lang',l);d.lang=l;d.dir=(l==='ar'?'rtl':'ltr');
     var bs=document.querySelectorAll('.lang button');
     for(var i=0;i<bs.length;i++)bs[i].setAttribute('aria-pressed',bs[i].getAttribute('data-set')===l?'true':'false');
     try{localStorage.setItem('h360lang',l)}catch(e){}
